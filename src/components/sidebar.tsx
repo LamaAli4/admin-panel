@@ -1,17 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
-
-const navItems = [
-  { name: "Dashboard", path: "/" },
-  { name: "Users", path: "/users" },
-  { name: "Settings", path: "/settings" },
-];
+import { navItems } from "../layouts/nav-config-dashboard";
 
 export default function Sidebar() {
   const location = useLocation();
 
   return (
     <aside className="w-64 border-r border-gray-200 flex flex-col">
-      <div className="px-lg py-md text-2xl font-bold mb-3">LOGO</div>
+      <div className="px-lg py-md mb-3">
+        <img src="/public/assets/download.svg" alt="Logo" className="h-10 w-auto" />
+      </div>
       <nav className="flex-1 px-md py-sm">
         <ul className="space-y-sm">
           {navItems.map((item) => (
@@ -24,7 +21,8 @@ export default function Sidebar() {
                     : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                 }`}
               >
-                {item.name}
+                {item.icon}
+                <span>{item.name}</span>
               </Link>
             </li>
           ))}

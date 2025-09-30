@@ -13,10 +13,6 @@
   --spacing-2xl: 3rem;
   --spacing-3xl: 4rem;
 
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
 
   --color-primary-lighter: #c8facd;
   --color-primary-light: #5be584;
@@ -59,34 +55,4 @@
   --shadow-lg: 0px 4px 8px rgba(145, 158, 171, 0.2);
 }
 
-@layer base {
-  html,
-  body,
-  #root {
-    @apply h-full w-full bg-gray-50 text-gray-900 font-sans;
-  }
 
-  h1 {
-    @apply text-3xl font-bold tracking-tight;
-  }
-
-  h2 {
-    @apply text-2xl font-semibold tracking-tight;
-  }
-
-  h3 {
-    @apply text-xl font-semibold;
-  }
-
-  p {
-    @apply text-base leading-relaxed text-gray-700;
-  }
-
-  a {
-    @apply text-primary no-underline;
-  }
-
-  button {
-    @apply font-medium;
-  }
-}
