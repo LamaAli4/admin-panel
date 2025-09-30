@@ -1,15 +1,26 @@
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
-      <p className="text-lg text-gray-600 mb-6">
-        Oops! The page you are looking for does not exist.
+    <div className="flex flex-col items-center justify-center min-h-screen p-6">
+      <div className="absolute top-5 left-5 text-2xl font-bold">LOGO</div>
+
+      <h1 className="text-3xl font-bold mb-3">Sorry, page not found!</h1>
+
+      <p className="text-gray-600 max-w-md text-center">
+        Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve
+        mistyped the URL? Be sure to check your spelling.
       </p>
+
+      <img
+        src="/public/assets/image.png"
+        alt="404"
+        className="w-80 h-auto my-10"
+      />
+
       <a
         href="/"
-        className="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700"
+        className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
       >
-        Back to Dashboard
+        Go to home
       </a>
     </div>
   );
