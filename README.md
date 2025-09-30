@@ -1,69 +1,51 @@
-# React + TypeScript + Vite
+# Admin Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Description
 
-Currently, two official plugins are available:
+This project is a **simple Admin Panel layout** built using **React, TypeScript, Vite, and TailwindCSS v4**.  
+It provides the basic structure for dashboard features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The layout includes:
 
-## Expanding the ESLint configuration
+- **Sidebar** with Logo + Navigation Items (supports children).
+- **Header** for page title
+- **Content Area** where child pages are rendered using React Router `<Outlet />`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React 19** – UI library
+- **TypeScript** – For type safety
+- **Vite** – Fast development/build tool
+- **TailwindCSS v4** – For styling
+- **React Router** – For routing and nested layouts
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📂 Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+src/
+ ├── components/
+ │
+ ├── pages/
+ │   
+ ├── router/
+ │
+ ├── App.tsx
+ └── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✅ Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Responsive **Sidebar + Header + Content** layout
+- Navigation with **Dashboard** and **Settings** pages
+- Uses **React Router `<Outlet />`** for nested routes
+- Built with **TypeScript** for type safety
+- Styled with **TailwindCSS v4**
+- Ready for future expansion (charts, tables, reports)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Quick start
+
+- Clone the repo: `git clone https://github.com/LamaAli4/admin-panel.git`
+- **Install:** `npm install`
+- **Start:** `npm run dev`
+- **Build:** `npm run build`
+- Open browser: `http://localhost:5173/`
