@@ -11,7 +11,7 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 border-r border-gray-200 flex flex-col">
-      <div className="px-lg py-md text-2xl font-bold">LOGO</div>
+      <div className="px-lg py-md text-2xl font-bold mb-3">LOGO</div>
       <nav className="flex-1 px-md py-sm">
         <ul className="space-y-sm">
           {navItems.map((item) => (

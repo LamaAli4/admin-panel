@@ -12,7 +12,9 @@
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.2.8",
     "@fontsource/barlow": "^5.2.8",
+    "@tanstack/react-table": "^8.21.3",
     "@types/react-router-dom": "^5.3.3",
+    "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3"

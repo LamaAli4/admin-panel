@@ -1,3 +1,11 @@
+// Pages/dashboard.tsx
+import Header from "../components/header";
+
 export default function Dashboard() {
-  return <h2 className="text-2xl font-bold">Dashboard</h2>;
+  return (
+    <>
+      <Header />
+      <div className="p-lg text-2xl font-bold ">Dashboard</div>
+    </>
+  );
 }

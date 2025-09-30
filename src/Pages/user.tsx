@@ -1,3 +1,5 @@
+import { UserView } from "../sections/user/view/user-view";
+
 export default function Users() {
-  return <h2 className="text-2xl font-bold">Users</h2>;
+  return <UserView />;
 }
