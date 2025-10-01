@@ -5,12 +5,15 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <aside className="w-64 border-r border-gray-200 flex flex-col shadow-md">
+    <aside
+      className="fixed top-0 left-0 h-screen w-64 border-r border-gray-200 
+      flex flex-col shadow-md bg-white z-40"
+    >
       <div className="px-lg py-md mb-md">
         <img src="/assets/logo.svg" alt="Logo" className="h-10 w-auto" />
       </div>
 
-      <nav className="flex-1 px-md py-sm">
+      <nav className="flex-1 px-md py-sm overflow-y-auto">
         <ul className="space-y-sm">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;

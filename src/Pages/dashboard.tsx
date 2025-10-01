@@ -1,10 +1,5 @@
-import Header from "../components/header";
+import DashboardView from "../sections/dashboard/view";
 
-export default function Dashboard() {
-  return (
-    <>
-      <Header />
-      <div className="p-lg text-2xl font-bold ">Dashboard</div>
-    </>
-  );
+export default function Users() {
+  return <DashboardView />;
 }

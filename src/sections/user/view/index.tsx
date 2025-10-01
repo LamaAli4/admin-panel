@@ -23,7 +23,7 @@ export function UserView() {
 
   return (
     <div className="p-6 lg:p-8  min-h-screen">
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-3xl">
         <h1 className="text-3xl font-bold text-primary-darker tracking-tight">
           Users
         </h1>
