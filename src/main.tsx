@@ -1,23 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import React, { Suspense } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { routesSection } from "./router/section";
+import "./index.css";
+import ReactDOM from "react-dom/client";
+import Loading from "./components/loading";
 
-const router = createBrowserRouter([
-  {
-    Component: () => (
-      <App>
-        <Outlet />
-      </App>
-    ),
-    children: routesSection,
-  },
-]);
+const router = createBrowserRouter(routesSection);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<Loading />}>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>
 );

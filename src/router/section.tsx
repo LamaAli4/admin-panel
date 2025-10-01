@@ -1,11 +1,10 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import MainLayout from "../layouts/main-layout";
-import Loading from "../components/loading";
 
-const Dashboard = lazy(() => import("../Pages/dashboard"));
-const Users = lazy(() => import("../Pages/user"));
-const Settings = lazy(() => import("../Pages/settings"));
-const NotFound = lazy(() => import("../Pages/page-not-found"));
+const Dashboard = lazy(() => import("../pages/dashboard"));
+const Users = lazy(() => import("../pages/user"));
+const Products = lazy(() => import("../pages/products"));
+const NotFound = lazy(() => import("../pages/page-not-found"));
 
 export const routesSection = [
   {
@@ -14,36 +13,20 @@ export const routesSection = [
     children: [
       {
         index: true,
-        element: (
-          <Suspense fallback={<Loading />}>
-            <Dashboard />
-          </Suspense>
-        ),
+        element: <Dashboard />,
       },
       {
         path: "users",
-        element: (
-          <Suspense fallback={<Loading />}>
-            <Users />
-          </Suspense>
-        ),
+        element: <Users />,
       },
       {
-        path: "settings",
-        element: (
-          <Suspense fallback={<Loading />}>
-            <Settings />
-          </Suspense>
-        ),
+        path: "products",
+        element: <Products />,
       },
     ],
   },
   {
     path: "*",
-    element: (
-      <Suspense fallback={<Loading />}>
-        <NotFound />
-      </Suspense>
-    ),
+    element: <NotFound />,
   },
 ];

@@ -1,4 +1,4 @@
-import { LayoutDashboard, Users, Settings } from "lucide-react";
+import { LayoutDashboard, Users, ShoppingCart } from "lucide-react";
 
 export type NavItem = {
   name: string;
@@ -18,8 +18,8 @@ export const navItems: NavItem[] = [
     icon: <Users className="w-5 h-5" />,
   },
   {
-    name: "Settings",
-    path: "/settings",
-    icon: <Settings className="w-5 h-5" />,
+    name: "Products",
+    path: "/products",
+    icon: <ShoppingCart className="w-5 h-5" />,
   },
 ];
